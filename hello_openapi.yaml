@@ -1,18 +1,18 @@
 openapi: 3.0.1
 info:
-  title: Main Openapi Yaml
+  title: Hello
   version: 0.1.0
 servers:
-- url: "{server}:{port}/"
+- url: "{server}:{port}/hello"
   variables:
     server:
       default: http://localhost
     port:
-      default: constPort
+      default: "8090"
 paths:
-  /welcome:
+  /greeting:
     get:
-      operationId: getWelcome
+      operationId: getGreeting
       responses:
         "200":
           description: Ok
